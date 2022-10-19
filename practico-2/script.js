@@ -1,37 +1,95 @@
 const fs = require('fs');
 
 class Contenedor {
-    constructor(title, price, id) {
-        this.title = title;
-        this.price = price;
-        this.id = id;
+    constructor(file) {
+        this.file = file;
     }
 
-    async save(object) {
-        await fs.promises.writeFile('./data.txt', object)
-            .then(() => {
-                const objectRecieved = JSON.parse(object)
-                return console.log(objectRecieved.id)
-            })
-            .catch((err) => console.log(err))
-    }
-
-    async getById(Number) {
-        await fs.readFile('./data.txt', 'utf8', (err, content) => {
-            if(err) {
-                throw err;
+    async save(product) {
+        try {
+            if (fs.existsSync(this.file)) {
+                const products = await this.getAll();
+                product.id = products.length;
+                products.push(product)
+                await fs.promises.writeFile(this.file, JSON.stringify(products, null, 2))
             } else {
-                const dataToRead = JSON.parse(content)
-                const findID = dataToRead.find(el => el.id === Number);
-                return console.log(findID)
+                product.id = 0;
+                await fs.promises.writeFile(this.file, JSON.stringify([product], null, 2))
             }
-        })
+        } catch {
+            console.log('entre al error')
+        }
     }
 
+    async getById(id) {
+        try {
+            const products = await this.getAll()
+            const findById = products.find(el => el.id === id)
+            if (findById === undefined) {
+                return console.log('null')
+            }
+            return console.log(findById)
+        } catch {
+            console.log('el archivo no puede ser encontrado')
+        }
+
+    }
+
+    async getAll() {
+        try {
+            const content = await fs.promises.readFile(this.file, "utf-8")
+            if (content.length > 0) {
+                return JSON.parse(content)
+            } else {
+                return []
+            }
+        } catch {
+            console.log('error al leer los archivos')
+        }
+
+    }
+
+    async deleteById(id) {
+        try {
+            const products = await this.getAll()
+            const deleteById = products.filter(el => el.id !== id)
+            await fs.promises.writeFile(this.file, JSON.stringify(deleteById, null, 2))
+        } catch {
+            console.log('el elemento no puede ser borrado')
+        }
+
+    }
+
+    async deleteAll() {
+        try {
+            await fs.promises.writeFile(this.file, '');
+        } catch {
+            console.log('el archivo no puede ser vaciado')
+        }
+    }
 }
 
-const dataToTest = new Contenedor('Mouse', 100, 0)
-const dataToTestString = JSON.stringify(dataToTest)
 
-dataToTest.save(dataToTestString)
-dataToTest.getById(1)
+const createFile = new Contenedor('products.txt')
+
+const producto1 = {
+    nombre: 'Mouse',
+    marca: 'Razer'
+}
+
+const producto2 = {
+    nombre: 'Teclado',
+    marca: 'Razer'
+}
+
+const useMethods = async () => {
+    await createFile.save(producto1)
+    await createFile.save(producto2)
+    await createFile.getById(1)
+    await createFile.deleteById(0)
+    await createFile.deleteAll()
+}
+
+useMethods()
+
+
