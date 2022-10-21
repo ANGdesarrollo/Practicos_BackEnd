@@ -4,21 +4,22 @@ const port = process.env.PORT | 8080
 const classContainer = require("./classContainer");
 
 
-function createSv() {
+async function createSv() {
+    const container = new classContainer('products.txt')
+    const allProducts = await container.getAll()
+
     app.get("/products", async (req,res) => {
-        const container = new classContainer('products.txt')
-        const allProducts = await container.getAll()
         res.json(allProducts)
     });
     app.get("/randomProduct", async (req,res) => {
-        const container = new classContainer('products.txt')
-        const allProducts = await container.getAll()
-        const randomProduct = allProducts.find(el => el.id === (Math.floor(Math.random() * allProducts.length)))
+        const random = (Math.floor(Math.random() * allProducts.length))
+        const randomProduct = allProducts.find(el => el.id === random)
         res.json(randomProduct)
     });
 
     app.listen(port, () => {
         console.log(`Example app listening on port ${port}`)
+
     })
 }
 
