@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="65ef3a8f-855e-4b82-8b1d-f70e728618b5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-1/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-1/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-3/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-3/server.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2GBiGwj34mL5O9ARfddBGRYy3lj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-4" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-4" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/practico-2/script.js" working-dir="$PROJECT_DIR$/practico-2">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.script.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="65ef3a8f-855e-4b82-8b1d-f70e728618b5" name="Changes" comment="" />
+      <created>1665868289459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665868289459</updated>
+      <workItem from="1665868293442" duration="110000" />
+      <workItem from="1665868627559" duration="437000" />
+      <workItem from="1665966899447" duration="2050000" />
+      <workItem from="1666127586058" duration="2840000" />
+      <workItem from="1666131222540" duration="4775000" />
+      <workItem from="1666175349028" duration="21692000" />
+      <workItem from="1666352088277" duration="16168000" />
+      <workItem from="1666968894106" duration="635000" />
+      <workItem from="1666980764088" duration="4000" />
+      <workItem from="1666980784965" duration="2416000" />
+      <workItem from="1667080167209" duration="2202000" />
+      <workItem from="1667174230876" duration="5330000" />
+      <workItem from="1667180316752" duration="7908000" />
+      <workItem from="1667217337787" duration="5243000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

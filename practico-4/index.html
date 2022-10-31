@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form method="POST" action="/api/products/form/uploadProduct">
+    <div>
+        <label for="name">Enter the product</label>
+        <input name="name" id="name" type="text">
+    </div>
+    <div>
+        <label for="price">Enter the price</label>
+        <input name="price" id="price" type="number">
+    </div>
+    <div>
+        <label for="thumbnail">Enter the URL of Img</label>
+        <input name="thumbnail" id="thumbnail" type="text">
+    </div>
+    <button type="submit">Send Product</button>
+</form>
+
+</body>
+</html>

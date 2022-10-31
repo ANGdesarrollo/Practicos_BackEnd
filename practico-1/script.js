@@ -35,3 +35,4 @@ console.log(usuario.countMascotas())
 usuario.addBook('Contacto', 'Carl Sagan')
 console.log(usuario.getBookNames())
 console.log(usuario)
+
