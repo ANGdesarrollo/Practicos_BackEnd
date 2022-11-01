@@ -25,7 +25,7 @@ class Container {
         try {
             let products = await this.getAll();
             const findById = products.findIndex(el => el.id === Number(id))
-            products[findById] = body
+            products[findById] = {...products[findById], ...body }
             await fs.promises.writeFile(this.file, JSON.stringify(products, null, 2))
         } catch {
             console.log("item couldn't be replaced");

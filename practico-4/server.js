@@ -39,7 +39,7 @@ routerProducts.get('/:id',async (req, res) => {
     let products = await container.getAll();
     let {id} = req.params;
     id = Number(id);
-    if (id < products.length && id !== 0) {
+    if (id <= products.length && id !== 0) {
         const findById = products.find(el => el.id === id);
         res.json(findById)
     } else {
