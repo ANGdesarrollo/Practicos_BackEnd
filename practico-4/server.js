@@ -57,9 +57,8 @@ routerProducts.post('', async(req, res) => {
 //PUT '/api/productos/:id' -> recibe y actualiza un producto según su id.
 routerProducts.put('/:id', async(req, res) => {
     let products = await container.getAll();
-    console.log('esto es un error', products)
     const {id} = req.params;
-    if (id < products.length + 1 && id !== 0) {
+    if (id <= products.length && id !== 0) {
         const {body} = req;
         await container.modifyItem(id, body);
         products = await container.getAll();
