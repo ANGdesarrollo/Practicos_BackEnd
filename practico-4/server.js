@@ -3,7 +3,6 @@ const app = express();
 const port = process.env.PORT | 8080;
 const {Router} = express;
 const routerProducts = Router();
-const multer = require('multer');
 const Container = require('./classContainer');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
