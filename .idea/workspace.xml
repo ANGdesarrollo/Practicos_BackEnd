@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d8f77b-ba53-457f-8023-0ba7106f373d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-4/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-4/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,24 +27,25 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.18.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="16.18.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-5/ejs/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-5/handleBars" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\ejs\views\layouts" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\ejs" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars\store" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars\views\partials" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug\views\layouts" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars\store" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

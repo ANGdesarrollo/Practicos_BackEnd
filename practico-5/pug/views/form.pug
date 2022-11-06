@@ -1,0 +1,15 @@
+extend layouts/index.pug
+block content
+    .container
+        form(method='POST', action='/product')
+            h1 Create Product
+            div
+                label.form-label(for='name') Enter the product
+                input#name.form-control(name='title', type='text')
+            div
+                label.form-label(for='price') Enter the price
+                input#price.form-control(name='price', type='number')
+            div
+                label.form-label(for='thumbnail') Enter the URL of Img
+                input#thumbnail.form-control(name='thumbnail', type='text')
+            button.btn.btn-dark(type='submit') Send Product

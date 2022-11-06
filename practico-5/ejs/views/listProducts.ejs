@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./layouts/head'); %>
+<body>
+<%- include('./layouts/navBar'); %>
+<div class="container">
+    <h1>List of products</h1>
+    <div class="d-flex justify-content-around">
+        <% products.forEach(function(product){ %>
+            <div class="card" style="width: 10rem;">
+                <img src=<%= product.thumbnail%> class="card-img-top" alt=<%= product.title%>>
+                <div class="card-body">
+                    <h6 class="card-title"><%= product.title%></h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">USD <%= product.price%></li>
+                </ul>
+            </div>
+        <% }); %>
+    </div>
+</div>
+</body>
+

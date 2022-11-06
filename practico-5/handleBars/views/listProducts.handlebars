@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>List of products</h1>
+    <div class="d-flex justify-content-around">
+        {{#each products}}
+            <div class="card" style="width: 10rem;">
+                <img src={{{thumbnail}}} class="card-img-top" alt={{{title}}}>>
+                <div class="card-body">
+                    <h6 class="card-title">{{{title}}}</h6>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">USD {{{price}}}</li>
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
