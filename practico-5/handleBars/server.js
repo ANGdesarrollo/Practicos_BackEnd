@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
 
 app.get('/products', async(req,res) => {
     const products = await container.getAll();
-    console.log(products)
     res.render('listProducts', { products })
 })
 

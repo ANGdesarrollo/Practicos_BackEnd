@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d8f77b-ba53-457f-8023-0ba7106f373d" name="Changes" comment="">
+    <list default="true" id="13d4af92-baac-412d-b87a-da6e32d6d76d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-5/handleBars/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-5/handleBars/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2Gx55vtqazUGcQ6qmnZqPhVycgT" />
+  <component name="ProjectId" id="2HVelmyLqMAoBYZFFVeYL1J8B6C" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,43 +28,29 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="16.18.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="16.18.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-5/handleBars" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-6" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\ejs\views\layouts" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\ejs" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-6" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars\views\partials" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug\views\layouts" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\handleBars" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-5\pug" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-6" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d5d8f77b-ba53-457f-8023-0ba7106f373d" name="Changes" comment="" />
-      <created>1667317218872</created>
+      <changelist id="13d4af92-baac-412d-b87a-da6e32d6d76d" name="Changes" comment="" />
+      <created>1668374836002</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1667317218872</updated>
-      <workItem from="1667317223175" duration="2694000" />
-      <workItem from="1667391616495" duration="2129000" />
-      <workItem from="1667585508259" duration="8085000" />
-      <workItem from="1667692926440" duration="4275000" />
-      <workItem from="1667754179228" duration="6448000" />
-      <workItem from="1667761006866" duration="2589000" />
+      <updated>1668374836002</updated>
+      <workItem from="1668374841201" duration="12878000" />
+      <workItem from="1668393447772" duration="542000" />
     </task>
     <servers />
   </component>
