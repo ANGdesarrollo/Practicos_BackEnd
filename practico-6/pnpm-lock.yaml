@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  dayjs: ^1.11.6
   express: ^4.18.2
   express-handlebars: ^6.0.6
   nodemon: ^2.0.20
   socket.io: ^4.5.3
 
 dependencies:
+  dayjs: 1.11.6
   express: 4.18.2
   express-handlebars: 6.0.6
   socket.io: 4.5.3
@@ -172,6 +174,10 @@ packages:
     dependencies:
       object-assign: 4.1.1
       vary: 1.1.2
+    dev: false
+
+  /dayjs/1.11.6:
+    resolution: {integrity: sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==}
     dev: false
 
   /debug/2.6.9:

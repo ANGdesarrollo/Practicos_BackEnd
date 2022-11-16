@@ -7,11 +7,15 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+//DayJS
+const dayjs = require('dayjs')
+const now = dayjs()
 //Handlebars
 const { engine } = require('express-handlebars')
 //classContainer
 const containerClass = require('./store/classContainer');
-const container = new containerClass('./store/products.txt');
+const containerProducts = new containerClass('./store/products.txt');
+const containerChat = new containerClass('./store/chat.txt');
 
 //Configs del sv
 app.use(express.static(__dirname + "/public"));
@@ -22,21 +26,46 @@ app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 server.listen(PORT, () => {
-    console.log(`listening on http://locahost:${PORT}`);
+    console.log(`listening on http://localhost:${PORT}`);
 });
 
 io.on('connection', async(socket) => {
-    const allProducts = await container.getAll();
-    socket.emit('allProducts', allProducts)
+    const allProducts = await containerProducts.getAll();
+    socket.emit('allProducts', allProducts);
+    socket.on('productAdded', saveProduct);
+    socket.on('msg', sendMessages);
+    socket.on('renderChat', renderChat)
 });
+
 
 app.get('/', async(req, res) => {
     res.render('home');
 
 });
 
-app.post('product', (req, res) => {
-    const { title, price, thumbnail } = req.body;
+const saveProduct = async(data) => {
+    await containerProducts.save(data);
+    containerProducts.getAll().then(ele => io.sockets.emit('allProducts', ele));
+}
 
-})
+console.log()
+const sendMessages = async(data) => {
+    const dateFormated = now.format('DD/MM/YYYY hh:mm:ss')
+    const dataToSend = {...data, date: dateFormated}
+    await containerChat.save(dataToSend);
+    await renderChat()
+}
+
+const renderChat = async() => {
+    return containerChat.getAll().then(ele => io.sockets.emit('allMessages', ele))
+}
+
+
+
+
+
+
+
+
+
 

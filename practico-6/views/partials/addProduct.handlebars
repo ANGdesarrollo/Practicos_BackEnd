@@ -1,21 +1,21 @@
 <div class="d-flex justify-content-center"><h1>ADD PRODUCT</h1></div>
-<form class="container p-4" action="/product" method="POST">
+<form class="container p-4" action="/product" method="POST" id="js-form">
     <div class="row mb-4">
         <div class="col">
             <div class="form-outline">
-                <input type="text" id="form3Example1" class="form-control" />
+                <input name="title" type="text" id="form3Example1" class="form-control" />
                 <label class="form-label" for="form3Example1">Product Name</label>
             </div>
         </div>
         <div class="col">
             <div class="form-outline">
-                <input type="number" id="form3Example2" class="form-control" />
+                <input name="price" type="number" id="form3Example2" class="form-control" />
                 <label class="form-label" for="form3Example2">Price</label>
             </div>
         </div>
     </div>
     <div class="form-outline mb-4">
-        <input type="email" id="form3Example3" class="form-control" />
+        <input name="thumbnail" type="url" id="form3Example3" class="form-control" />
         <label class="form-label" for="form3Example3">URL IMG</label>
     </div>
     <button type="submit" class="btn btn-primary btn-block mb-4">Add Product</button>

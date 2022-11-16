@@ -1,23 +1,79 @@
 const socket = io();
+const API = 'http://localhost:8080';
 
-socket.on("connect", () => {
-    socket.on("allProducts", async(data) => {
-        const allProductsContainer = document.getElementById("js-allProducts")
-        data.map(el => {
-            const productContainer = document.createElement('tr');
-            const idProduct = document.createElement('th');
-            const titleProduct = document.createElement('th');
-            const priceProduct = document.createElement('th');
-            const thumbnailProduct = document.createElement('th');
 
-            allProductsContainer.append(productContainer);
-            productContainer.append(idProduct, titleProduct, priceProduct, thumbnailProduct);
+// Dom Calls
+const productsToShowContainer = document.getElementById('js-allProducts');
+const productAddedForm = document.getElementById('js-form');
+const sendMessageForm = document.getElementById('js-form-chat');
+const showMessages = document.getElementById('js-chatRoom');
 
-            idProduct.setAttribute('scope', 'row');
-            titleProduct.setAttribute('scope', 'row');
-            priceProduct.setAttribute('scope', 'row');
-            thumbnailProduct.setAttribute('scope', 'row');
+//Functions
+const renderProductList = (data) => {
+    fetch(`${API}/showProducts.handlebars`)
+        .then(res => res.text())
+        .then(res => {
+            const template = Handlebars.compile(res)
+            productsToShowContainer.innerHTML = template({products: data})
         })
-    })
-});
+}
+
+const addProductForm = (e) => {
+    e.preventDefault()
+    const {title, price, thumbnail} = e.target
+    const productToSend = {
+        title: title.value,
+        price: price.value,
+        thumbnail: thumbnail.value
+    }
+    socket.emit('productAdded', productToSend)
+}
+
+const renderMessagesChat = (data) => {
+    fetch(`${API}/showChat.handlebars`)
+        .then(res => res.text())
+        .then(res => {
+            const template = Handlebars.compile(res);
+            showMessages.innerHTML = template({chat: data})
+
+        })
+}
+
+const validEmail = (data) => {
+    const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+    if (validEmail.test(data)) {
+        return true;
+    } else {
+        alert('Please enter a valid Email');
+        return false;
+    }
+}
+
+const sendMessage = (e) => {
+    if (e !== undefined) {
+        e.preventDefault();
+        const {username, message} = e.target;
+        const messageToSend = {username: username.value, message: message.value}
+        validEmail(username.value) && socket.emit('msg', messageToSend)
+
+    } else {
+        socket.emit('renderChat', 'Un usuario se ha conectado')
+    }
+}
+
+
+
+
+// Add Event Listeners
+productAddedForm.addEventListener('submit', addProductForm);
+sendMessageForm.addEventListener('submit', sendMessage);
+
+
+// Sockets
+socket.on('allProducts', renderProductList);
+socket.on('allMessages', renderMessagesChat);
+sendMessage()
+
+
 
