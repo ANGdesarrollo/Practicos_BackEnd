@@ -8,8 +8,8 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 //DayJS
-const dayjs = require('dayjs')
-const now = dayjs()
+const dayjs = require('dayjs');
+const now = dayjs();
 //Handlebars
 const { engine } = require('express-handlebars')
 //classContainer
@@ -48,17 +48,15 @@ const saveProduct = async(data) => {
     containerProducts.getAll().then(ele => io.sockets.emit('allProducts', ele));
 }
 
-console.log()
 const sendMessages = async(data) => {
-    const dateFormated = now.format('DD/MM/YYYY hh:mm:ss')
-    const dataToSend = {...data, date: dateFormated}
+    const dateFormated = now.format('DD/MM/YYYY hh:mm:ss');
+    const dataToSend = {...data, date: dateFormated};
     await containerChat.save(dataToSend);
-    await renderChat()
+    await renderChat();
 }
 
-const renderChat = async() => {
-    return containerChat.getAll().then(ele => io.sockets.emit('allMessages', ele))
-}
+const renderChat = async() => containerChat.getAll().then(ele => io.sockets.emit('allMessages', ele));
+
 
 
 
