@@ -4,9 +4,9 @@
 
 const { Router } = require('express');
 const router = Router();
-const { getAllProducts, getProductById, postProduct, updateProduct, deleteProduct} = require('../controllers/controllerProducts');
+const { getProducts, postProduct, updateProduct, deleteProduct} = require('../controllers/controllerProducts');
 
-router.get('/:id', getProductById );
+router.get('/:id', getProducts );
 router.post('/', postProduct);
 router.put('/:id', updateProduct);
 router.delete('/:id', deleteProduct);

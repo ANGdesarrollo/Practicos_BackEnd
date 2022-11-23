@@ -7,20 +7,17 @@ const dateNow = dayjs().format('YYYY-MMM-D');
 const {response} = require('express');
 const {isAdmin} = require('../server/server.js');
 
-const getAllProducts = async (req, res = response) => {
-    try {
-        const allProducts = await container.getAll();
-        res.json(allProducts);
-    } catch (err) {
-        res.json({error: err});
-    }
-};
-
-const getProductById = async (req, res = response) => {
+const getProducts = async (req, res = response) => {
     try {
         const {id} = req.params;
-        const product = await container.getById(Number(id));
-        res.json([product]);
+        if(id.length > 1) {
+            const product = await container.getById(Number(id));
+            res.json([product]);
+        } else {
+            const allProducts = await container.getAll();
+            res.json(allProducts)
+        }
+
     } catch (err) {
         res.json({error: err});
     }
@@ -72,8 +69,7 @@ const deleteProduct = async (req, res) => {
 };
 
 module.exports = {
-    getAllProducts,
-    getProductById,
+    getProducts,
     postProduct,
     updateProduct,
     deleteProduct
