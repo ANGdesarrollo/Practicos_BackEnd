@@ -16,10 +16,10 @@
 ###### PUT: '/:id' - = http://localhost:8080/api/products/:id  (Modifica un producto)
 ###### DELETE: '/:id' - = http://localhost:8080/api/products/:id  (Borra un producto)
 
-####El router base '/api/cart'
+#### El router base '/api/cart'
 
 ###### POST: '/' -  http://localhost:8080/api/cart (Crea un carrito y devuelve su id)
-######DELETE: '/:id' - http://localhost:8080/api/cart/:id (Vacía un carrito y lo elimina.)
-######GET: '/:id/products' - http://localhost:8080/api/cart/:id/products (Me permite listar todos los productos guardados en el carrito)
-######POST: '/:id/products' - http://localhost:8080/api/cart/:id/products (Para incorporar productos al carrito por su id de producto)
-######DELETE: '/:id/products/:id_prod' - http://localhost:8080/api/cart/:id/products/:id_prod (Eliminar un producto del carrito por su id de carrito y de producto)
+###### DELETE: '/:id' - http://localhost:8080/api/cart/:id (Vacía un carrito y lo elimina.)
+###### GET: '/:id/products' - http://localhost:8080/api/cart/:id/products (Me permite listar todos los productos guardados en el carrito)
+###### POST: '/:id/products' - http://localhost:8080/api/cart/:id/products (Para incorporar productos al carrito por su id de producto)
+###### DELETE: '/:id/products/:id_prod' - http://localhost:8080/api/cart/:id/products/:id_prod (Eliminar un producto del carrito por su id de carrito y de producto)
