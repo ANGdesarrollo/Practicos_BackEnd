@@ -1,0 +1,7 @@
+[
+  {
+    "timestamp": "2022-Nov-23",
+    "products": [],
+    "id": 0
+  }
+]
