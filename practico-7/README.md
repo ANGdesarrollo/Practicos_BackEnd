@@ -1,9 +1,7 @@
-# Editor.md
-
 
 #PRACTICO-7
 
-##Hecho para probar con POSTMAN.
+## Hecho para probar con POSTMAN.
 
 ## Sobre el practico =
 
