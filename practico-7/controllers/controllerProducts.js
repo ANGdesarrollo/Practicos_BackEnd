@@ -12,7 +12,7 @@ const getAllProducts = async (req, res = response) => {
         const allProducts = await container.getAll();
         res.json(allProducts);
     } catch (err) {
-        console.log(err);
+        res.json({error: err});
     }
 };
 
@@ -21,8 +21,8 @@ const getProductById = async (req, res = response) => {
         const {id} = req.params;
         const product = await container.getById(Number(id));
         res.json([product]);
-    } catch(err) {
-        console.log(err);
+    } catch (err) {
+        res.json({error: err});
     }
 };
 
@@ -38,7 +38,7 @@ const postProduct = async (req, res = response) => {
             res.json({error: -1, description: 'Route /api/products and method POST not authorized'});
         }
     } catch (err) {
-        console.log(err);
+        res.json({error: err});
     }
 };
 
@@ -53,7 +53,7 @@ const updateProduct = async (req, res) => {
             res.json({error: -1, description: 'Route /api/products/:id and method PUT not authorized'});
         }
     } catch (err) {
-        console.log(err);
+        res.json({error: err});
     }
 };
 
@@ -67,7 +67,7 @@ const deleteProduct = async (req, res) => {
             res.json({error: -1, description: 'Route /api/products/:id and method DELETE not authorized'});
         }
     } catch (err) {
-        console.log(err);
+        res.json({error: err});
     }
 };
 
