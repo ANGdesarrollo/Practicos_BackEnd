@@ -39,7 +39,7 @@ class Container {
             const data = await this.getAll()
             const findById = data.find(el => el.id === id)
             if (findById === undefined) {
-                return console.log('null')
+                return undefined
             }
             return findById
         } catch {

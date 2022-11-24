@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "cfefc07f-aa1f-4c3b-8afe-57613085d915",
+		"name": "Practico-7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24134817"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						},
+						"description": "Trae todos los productos"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/products/2\n",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/2\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"2\n"
+							]
+						},
+						"description": "Peticion de buscar un producto por su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"timestamp\": \"2022-Nov-21\",\r\n        \"title\": \"Notebook Razer\",\r\n        \"description\": \"Gamer Notebook Razer\",\r\n        \"code\": \"NOTEBOOK-RAZER\",\r\n        \"price\": 1400,\r\n        \"thumbnail\": \"https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Notebook_2_d9kvm7.webp\",\r\n        \"stock\": 50\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Modifica un producto"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/products/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"timestamp\": \"2022-Nov-23\",\r\n    \"title\": \"Mouse Razer\",\r\n    \"description\": \"Gamer Mouse Razer\",\r\n    \"price\": 70,\r\n    \"thumbnail\": \"https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp\",\r\n    \"stock\": 50\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								""
+							]
+						},
+						"description": "POST => Crea un nuevo producto y lo introduce en filesystem"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/products/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						},
+						"description": "Borra un producto por su ID"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart"
+							]
+						},
+						"description": "Crea un carrito y devuelve su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/cart/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cart/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"1"
+							]
+						},
+						"description": "Elimina un carrito por su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/cart/1/products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"timestamp\": \"2022-Nov-23\",\r\n    \"title\": \"Mouse Razer\",\r\n    \"description\": \"Gamer Mouse Razer\",\r\n    \"price\": 70,\r\n    \"thumbnail\": \"https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp\",\r\n    \"stock\": 50\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/cart/1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"1",
+								"products"
+							]
+						},
+						"description": "Agrega un producto al carrito creado"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/cart/1/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cart/1/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"1",
+								"products"
+							]
+						},
+						"description": "Muestra todos los productos agregados al carrito"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/cart/1/products/2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/cart/1/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"cart",
+								"1",
+								"products",
+								"2"
+							]
+						},
+						"description": "Borra un item del carrito por su id"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

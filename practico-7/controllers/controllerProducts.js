@@ -7,17 +7,21 @@ const dateNow = dayjs().format('YYYY-MMM-D');
 const {response} = require('express');
 const {isAdmin} = require('../server/server.js');
 
-const getProducts = async (req, res = response) => {
+const allProducts = async(req, res = response) => {
+    const getProducts = await container.getAll();
+    res.json(getProducts);
+}
+
+const getProduct = async(req, res = response) => {
     try {
-        const {id} = req.params;
-        if(id.length > 1) {
-            const product = await container.getById(Number(id));
+        const { id } = req.params;
+        const product = await container.getById(Number(id));
+        if(product !== undefined) {
             res.json([product]);
         } else {
             const allProducts = await container.getAll();
             res.json(allProducts)
         }
-
     } catch (err) {
         res.json({error: err});
     }
@@ -25,6 +29,7 @@ const getProducts = async (req, res = response) => {
 
 const postProduct = async (req, res = response) => {
     try {
+        console.log('entre a la funcion')
         if (isAdmin) {
             const {id, title, description, code, thumbnail, price, stock} = req.body;
             let product = {id, title, description, code, thumbnail, price, stock};
@@ -69,8 +74,9 @@ const deleteProduct = async (req, res) => {
 };
 
 module.exports = {
-    getProducts,
+    allProducts,
+    getProduct,
     postProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
 };

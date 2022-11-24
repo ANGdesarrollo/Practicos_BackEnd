@@ -1,7 +1,17 @@
 [
   {
-    "timestamp": "2022-Nov-23",
-    "products": [],
-    "id": 0
+    "timestamp": "2022-Nov-24",
+    "products": [
+      {
+        "id": 2,
+        "timestamp": "2022-Nov-23",
+        "title": "Mouse Razer",
+        "description": "Gamer Mouse Razer",
+        "price": 70,
+        "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
+        "stock": 50
+      }
+    ],
+    "id": 1
   }
 ]
