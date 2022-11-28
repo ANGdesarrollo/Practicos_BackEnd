@@ -1,0 +1,11 @@
+.img-list {
+    width: 4rem;
+}
+
+#js-chatRoom {
+    background-color: aliceblue;
+    height: 50vh;
+    width: 80vw;
+    border: 2px solid black;
+    overflow-y: scroll;
+}

@@ -1,0 +1,9 @@
+{{#if chat}}
+    {{#each chat}}
+        <div class="p-2">
+            <span class="text-primary fw-bold">{{username}}</span>
+            <span class="text-warning">[{{date}}]</span>
+            <span class="text-success fst-italic">: {{message}}</span>
+        </div>
+    {{/each}}
+{{/if}}
