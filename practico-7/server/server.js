@@ -9,13 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //isAdmin?
 module.exports.isAdmin = true;
-//Cors
-module.exports.cors = require('cors')
-
-module.exports.corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200
-}
 
 app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`);
