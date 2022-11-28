@@ -5,12 +5,13 @@
 const { Router } = require('express');
 const router = Router();
 const { getProduct, postProduct, updateProduct, deleteProduct, allProducts } = require('../controllers/controllerProducts');
+const { corsOptions, cors } = require('../server/server');
 
-router.get( '/', allProducts);
-router.get('/:id', getProduct );
-router.post('/', postProduct);
-router.put('/:id', updateProduct);
-router.delete('/:id', deleteProduct);
+router.get( '/', cors(corsOptions) , allProducts);
+router.get('/:id', cors(corsOptions) , getProduct );
+router.post('/', cors(corsOptions) , postProduct);
+router.put('/:id', cors(corsOptions) ,updateProduct);
+router.delete('/:id', cors(corsOptions) , deleteProduct);
 
 module.exports = router;
 

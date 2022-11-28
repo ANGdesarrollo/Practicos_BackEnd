@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13d4af92-baac-412d-b87a-da6e32d6d76d" name="Changes" comment="">
+    <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-6/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-6/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-6/views/layouts/main.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/practico-6/views/layouts/main.handlebars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-7/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-7/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-7/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/routes/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-7/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-8/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-8/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,44 +21,53 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2HVelmyLqMAoBYZFFVeYL1J8B6C" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Hvld7YZCPcYe2A7KTZF1KLB0Tq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-6" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-8" />
+    <property name="nodejs_package_manager_path" value="pnpm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-6" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-7" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-6" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8\server" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8\db" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-7\server" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="13d4af92-baac-412d-b87a-da6e32d6d76d" name="Changes" comment="" />
-      <created>1668374836002</created>
+      <changelist id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="" />
+      <created>1669173527068</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668374836002</updated>
-      <workItem from="1668374841201" duration="12878000" />
-      <workItem from="1668393447772" duration="1492000" />
-      <workItem from="1668515374465" duration="13001000" />
-      <workItem from="1668619341656" duration="14449000" />
-      <workItem from="1668695178285" duration="2827000" />
-      <workItem from="1668785965302" duration="8966000" />
-      <workItem from="1668895079424" duration="4537000" />
+      <updated>1669173527068</updated>
+      <workItem from="1669173529562" duration="1388000" />
+      <workItem from="1669174951756" duration="6399000" />
+      <workItem from="1669216255198" duration="18510000" />
+      <workItem from="1669240349155" duration="4507000" />
+      <workItem from="1669312625475" duration="2646000" />
+      <workItem from="1669316180180" duration="1744000" />
+      <workItem from="1669340625890" duration="977000" />
+      <workItem from="1669342600218" duration="781000" />
+      <workItem from="1669349294077" duration="1790000" />
+      <workItem from="1669628421154" duration="5770000" />
+      <workItem from="1669634398756" duration="7307000" />
     </task>
     <servers />
   </component>
