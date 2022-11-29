@@ -1,21 +1,53 @@
 [
   {
-    "timestamp": "2022-Nov-28",
+    "timestamp": "2022-Nov-29",
     "products": [
       {
+        "id": 2,
+        "timestamp": "2022-Nov-23",
         "title": "Mouse Razer",
         "description": "Gamer Mouse Razer",
         "price": 70,
         "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
         "stock": 50,
-        "dateNow": "2022-Nov-28",
-        "id": 0
+        "dateNow": "2022-Nov-29"
+      },
+      {
+        "id": 1,
+        "timestamp": "2022-Nov-21",
+        "title": "Notebook Razer",
+        "description": "Gamer Notebook Razer",
+        "code": "NOTEBOOK-RAZER",
+        "price": 1400,
+        "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Notebook_2_d9kvm7.webp",
+        "stock": 50,
+        "dateNow": "2022-Nov-29"
+      },
+      {
+        "id": 3,
+        "timestamp": "2022-Nov-23",
+        "title": "Keyboard Razer",
+        "description": "Gamer Keyboard Razer",
+        "price": 100,
+        "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Keyboard_1_slgpnz.webp",
+        "stock": 50,
+        "dateNow": "2022-Nov-29"
+      },
+      {
+        "id": 2,
+        "timestamp": "2022-Nov-23",
+        "title": "Mouse Razer",
+        "description": "Gamer Mouse Razer",
+        "price": 70,
+        "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
+        "stock": 50,
+        "dateNow": "2022-Nov-29"
       }
     ],
     "id": 1
   },
   {
-    "timestamp": "2022-Nov-28",
+    "timestamp": "2022-Nov-29",
     "products": [],
     "id": 2
   }

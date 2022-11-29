@@ -8,7 +8,7 @@ const { createCart, deleteCart, addProductToCart, productsInCart, deleteProductI
 
 router.post('/', createCart );
 router.delete('/:id', deleteCart );
-router.post('/:id/products', addProductToCart);
+router.post('/:id/products/:id_prod', addProductToCart);
 router.get('/:id/products', productsInCart);
 router.delete('/:id/products/:id_prod', deleteProductInCart)
 
