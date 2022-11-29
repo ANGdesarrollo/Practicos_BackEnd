@@ -25,9 +25,14 @@ class Container {
         try {
             let products = await this.getAll();
             const findById = products.findIndex(el => el.id === Number(id))
-            products[findById] = {...products[findById], ...body }
-            await fs.promises.writeFile(this.file, JSON.stringify(products, null, 2));
-            return products[findById]
+            if(findById !== -1) {
+                products[findById] = {...products[findById], ...body }
+                await fs.promises.writeFile(this.file, JSON.stringify(products, null, 2));
+                return products[findById]
+            } else {
+                return undefined
+            }
+
         } catch {
             console.log("item couldn't be replaced");
         }
@@ -51,10 +56,16 @@ class Container {
     async deleteItemInCart(idCart, idItem) {
         try {
             let cart = await this.getById(idCart);
-            console.log(cart)
-            cart.products = cart.products.filter(el => el.id !== idItem);
-            await this.modifyItem(idCart, cart);
-            return cart;
+            const exists = cart.products.find(el => el.id === idItem);
+
+            if(exists) {
+                cart.products = cart.products.filter(el => el.id !== idItem);
+                await this.modifyItem(idCart, cart);
+                return cart;
+            } else {
+                return undefined
+            }
+
         } catch {
             console.log('Error')
         }
@@ -62,7 +73,7 @@ class Container {
 
     async getAll() {
         try {
-            const content = await fs.promises.readFile(this.file, "utf-8")
+            const content = await fs.promises.readFile(this.file, "utf-8");
             if (content.length > 0) {
                 return JSON.parse(content)
             } else {
@@ -76,11 +87,17 @@ class Container {
 
     async deleteById(id) {
         try {
-            const products = await this.getAll()
-            const deleteById = products.filter(el => el.id !== Number(id))
-            await fs.promises.writeFile(this.file, JSON.stringify(deleteById, null, 2))
-        } catch {
-            console.log('the element cant be deleted')
+            const products = await this.getAll();
+            const getItem = await this.getById(id);
+            if(getItem !== undefined) {
+                const deleteById = products.filter(el => el.id !== Number(id));
+                await fs.promises.writeFile(this.file, JSON.stringify(deleteById, null, 2))
+                return true
+            } else {
+                return undefined
+            }
+        } catch(error) {
+            console.log(error)
         }
 
     }

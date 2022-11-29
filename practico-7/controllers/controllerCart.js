@@ -36,9 +36,17 @@ const addProductToCart = async (req, res = response) => {
         const { id } = req.params;
         const { body } = req;
         const cartSelected = await container.getById(Number(id));
-        cartSelected.products = [...cartSelected.products, body];
-        await container.modifyItem(id, cartSelected);
-        res.json({status: 'ok'})
+        const idToAdd = cartSelected.products.length;
+        const productToAdd = {...body, dateNow, id: idToAdd}
+
+        if(cartSelected !== undefined) {
+            cartSelected.products = [...cartSelected.products, productToAdd];
+            await container.modifyItem(Number(id), cartSelected);
+            res.json({status: 'ok'})
+        } else {
+            res.json({error: 'invalid cart'})
+        }
+
     } catch(err) {
         res.json({error: err});
     }
@@ -60,8 +68,9 @@ const deleteProductInCart = async (req, res = response) => {
     try {
         const { id } = req.params;
         const { id_prod } = req.params;
-        await container.deleteItemInCart(Number(id), Number(id_prod));
-        res.json({status: 'ok'})
+        const deleteItem = await container.deleteItemInCart(Number(id), Number(id_prod));
+        deleteItem ? res.json({status: 'ok'}) : res.json({error: 'Product or cart not found'})
+
     } catch(err) {
         res.json({error: err});
     }
