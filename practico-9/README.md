@@ -180,7 +180,6 @@ db.products.updateMany({price:{$gt: 4000}}, {$set:{stock: 0}})
 ```
 db.products.deleteMany({price: {$lt: 1000}})
 ```
-### E) Borrar los productos con precio menor a 1000 pesos
 
 ## 6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce.
 ```
