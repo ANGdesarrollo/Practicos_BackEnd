@@ -8,13 +8,13 @@
   {
     "id": 2,
     "title": "Mouse Razer",
-    "price": 70,
+    "price": 750,
     "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp"
   },
   {
     "id": 3,
-    "title": "Keyboard Razer",
-    "price": 100,
+    "title": "Keyboard pro v4",
+    "price": 1100,
     "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958399/react-js-game-on/products/Keyboard_1_slgpnz.webp"
-  }
+  },
 ]

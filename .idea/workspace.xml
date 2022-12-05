@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/practico-7/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-7/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-7/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/routes/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-7/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/server/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-6/store/chat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/practico-6/store/chat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-7/controllers/controllerCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-7/controllers/controllerCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-8/store/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/practico-8/store/products.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,12 @@
       <workItem from="1669342600218" duration="781000" />
       <workItem from="1669349294077" duration="1790000" />
       <workItem from="1669628421154" duration="5770000" />
-      <workItem from="1669634398756" duration="7613000" />
+      <workItem from="1669634398756" duration="8386000" />
+      <workItem from="1669682940971" duration="5742000" />
+      <workItem from="1669748065094" duration="3602000" />
+      <workItem from="1670016896591" duration="3052000" />
+      <workItem from="1670021961425" duration="1764000" />
+      <workItem from="1670251875955" duration="4178000" />
     </task>
     <servers />
   </component>

@@ -100,3 +100,7 @@ module.exports = {
     addProductToCart,
     deleteProductInCart
 };
+
+db.products.find(
+    {"price" : {}}
+)
