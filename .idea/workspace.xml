@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/practico-10/Back-End/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-6/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-6/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-8/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-8/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-10/Back-End/controllers/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-10/Back-End/controllers/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-10/Back-End/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-10/Back-End/routes/cart.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1670981265674" duration="13000" />
       <workItem from="1671029751598" duration="3222000" />
       <workItem from="1671033003229" duration="1016000" />
-      <workItem from="1671034038344" duration="25695000" />
+      <workItem from="1671034038344" duration="26468000" />
     </task>
     <servers />
   </component>

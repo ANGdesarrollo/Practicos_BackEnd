@@ -2,7 +2,6 @@ import CartModel from "../models/cart.js";
 import CartDaoMongoDB from "../daos/carts/cartDaosMongoDB.js";
 import log from "../utils/logger.js";
 import {response} from "express";
-import ProductModel from "../models/product.js";
 
 const containerMongo = new CartDaoMongoDB();
 
@@ -48,7 +47,7 @@ export const getAllCarts = async (req, res = response) => {
         log.info(err)
         res.json({
             status: false,
-            message: 'Products not found, please contact support'
+            message: 'Carts not found, please contact support'
         })
     }
 };
@@ -57,7 +56,7 @@ export const updateCart = async(req, res = response) => {
     try {
         if(req.body !== undefined) {
             const cart = req.body;
-            const update = await containerMongo.updateOne(CartModel, cart);
+            const update = await containerMongo.updateOne(cart);
             if(update !== undefined) {
                 res.json({
                     status: true,
@@ -79,4 +78,32 @@ export const updateCart = async(req, res = response) => {
             message: 'Failed to update the cart, please contact support'
         })
     }
-}
+};
+
+export const deleteCart = async(req, res = response) => {
+    try {
+        if(req.body !== undefined) {
+            const cartToDelete = req.body;
+            const deleteCart = await containerMongo.deleteOne(cartToDelete);
+            if(deleteCart !== undefined) {
+                res.json({
+                    status: true,
+                    message: 'Cart successfully deleted',
+                    cartDeleted: cartToDelete
+                });
+            } else {
+                res.json({
+                    status: false,
+                    message: "Cart doesn't exists, please check the information",
+                    failedCart: cartToDelete
+                });
+            }
+        }
+    } catch(err) {
+        log.info(err);
+        res.json({
+            status: false,
+            message: 'Failed to delete the cart, please contact support'
+        });
+    }
+};
