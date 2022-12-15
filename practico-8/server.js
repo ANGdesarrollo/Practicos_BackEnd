@@ -57,10 +57,10 @@ const createTables = async () => {
 
 const createTableProducts = () => {
     knexMariaDB.schema.createTable('products', table => {
-        table.increments('id')
-        table.string('title')
-        table.integer('price')
-        table.string('thumbnail')
+        table.increments('id');
+        table.string('title');
+        table.integer('price');
+        table.string('thumbnail');
     })
         .then(() => containerProducts.save({
             "id": 1,

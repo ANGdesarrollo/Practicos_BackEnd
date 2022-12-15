@@ -30,6 +30,7 @@ server.listen(PORT, () => {
 });
 
 io.on('connection', async(socket) => {
+    console.log('connected')
     const allProducts = await containerProducts.getAll();
     socket.emit('allProducts', allProducts);
     socket.on('productAdded', saveProduct);

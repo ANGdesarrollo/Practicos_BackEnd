@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/practico-10/Back-End/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/practico-9/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-6/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-6/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-8/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-8/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,23 +27,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/practico-8" />
-    <property name="nodejs_package_manager_path" value="pnpm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-7" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8\server" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8\db" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-7\server" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End\containers" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End\database\firebase" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End\server" />
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End\database" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,7 +72,19 @@
       <workItem from="1669748065094" duration="3602000" />
       <workItem from="1670016896591" duration="3052000" />
       <workItem from="1670021961425" duration="1764000" />
-      <workItem from="1670251875955" duration="5343000" />
+      <workItem from="1670251875955" duration="5961000" />
+      <workItem from="1670456083445" duration="251000" />
+      <workItem from="1670470260752" duration="394000" />
+      <workItem from="1670471128168" duration="4475000" />
+      <workItem from="1670465299039" duration="2684000" />
+      <workItem from="1670470177457" duration="267000" />
+      <workItem from="1670698736366" duration="868000" />
+      <workItem from="1670699619956" duration="11624000" />
+      <workItem from="1670886398033" duration="631000" />
+      <workItem from="1670981265674" duration="13000" />
+      <workItem from="1671029751598" duration="3222000" />
+      <workItem from="1671033003229" duration="1016000" />
+      <workItem from="1671034038344" duration="25695000" />
     </task>
     <servers />
   </component>
@@ -84,6 +101,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
