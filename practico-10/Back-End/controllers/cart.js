@@ -28,7 +28,7 @@ export const saveCart = async (req, res = response) => {
 
 export const getAllCarts = async (req, res = response) => {
     try {
-        const allCarts = await containerMongo.getAll(CartModel);
+        const allCarts = await containerMongo.getAll();
         if (allCarts.length > 0) {
             res.json({
                 status: true,
