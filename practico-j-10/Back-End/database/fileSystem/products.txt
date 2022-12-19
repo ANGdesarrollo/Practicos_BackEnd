@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2022-12-19T03:00:00.000Z",
+    "title": "Mouse",
+    "price": 40,
+    "description": "The best Mouse in the world, 3500DPI",
+    "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
+    "stock": 40,
+    "_id": "639fde23e0fd171842f1bdb0"
+  },
+  {
+    "timestamp": "2022-12-19T03:00:00.000Z",
+    "title": "Mouse",
+    "price": 40,
+    "description": "The best Mouse in the world, 3500DPI",
+    "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
+    "stock": 3000,
+    "_id": "639fde3ba47a48157961fd62"
+  }
+]

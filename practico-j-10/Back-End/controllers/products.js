@@ -1,18 +1,21 @@
 import ProductModel from "../models/product.js";
-import ProductsDaoMongoDB from "../daos/products/productDaosMongoDB.js";
 import log from "../utils/logger.js";
 import {response} from "express";
+import Instance from "../environment/instances.js";
+import dayjs from 'dayjs';
 
-const containerMongo = new ProductsDaoMongoDB();
+const dateNow = dayjs().format('YYYY/MM/DD');
+const Container = new Instance.classProduct();
 
 export const saveProduct = async (req, res = response) => {
     try {
         if (req.body !== undefined) {
-            const newProduct = new ProductModel(req.body);
-            const saveProduct = await containerMongo.save(newProduct);
+            const productToAdd = {...req.body, timestamp: dateNow}
+            let newProduct = new ProductModel(productToAdd);
+
+            await Container.save(newProduct);
             res.json({
                 status: true,
-                product: saveProduct,
                 message: 'Product successfully added',
                 productAdded: newProduct
             });
@@ -28,7 +31,8 @@ export const saveProduct = async (req, res = response) => {
 
 export const getAllProducts = async (req, res = response) => {
     try {
-        const allProducts = await containerMongo.getAll();
+        const allProducts = await Container.getAll();
+
         if(allProducts.length > 0) {
             res.json({
                 status: true,
@@ -51,22 +55,48 @@ export const getAllProducts = async (req, res = response) => {
     }
 }
 
+export const getById = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const getProductById = await Container.getById(id);
+        if(getProductById ) {
+            res.json({
+                status: true,
+                message: 'Product found',
+                product: getProductById
+            })
+        } else {
+            res.json({
+                status: true,
+                message: "Product doesn't exists, please check the ID"
+            })
+        }
+
+    }catch(err) {
+        log.info(err)
+        res.json({
+            status: false,
+            message: 'Failed to find the product, please contact support'
+        })
+    }
+}
+
 export const updateProduct = async(req, res = response) => {
     try {
         if(req.body !== undefined) {
+            const { id } = req.params;
             const product = req.body;
-            const update = await containerMongo.updateOne(product);
+            const update = await Container.updateOne( id, product );
             if(update !== undefined) {
                 res.json({
                     status: true,
                     message: 'Product updated successfully',
-                    productUpdated: product
+                    productUpdated: update
                 })
             } else {
                 res.json({
-                    status: false,
-                    message: "Product doesn't exists, please check the information",
-                    failedProduct: product
+                    status: true,
+                    message: "Product doesn't exists, please check the information"
                 })
             }
         }
@@ -82,19 +112,19 @@ export const updateProduct = async(req, res = response) => {
 export const deleteProduct = async(req, res = response) => {
     try {
         if(req.body !== undefined) {
-            const productToDelete = req.body;
-            const deleteProduct = await containerMongo.deleteOne(productToDelete);
-            if(deleteProduct !== undefined) {
+            const { id } = req.params;
+            const deleteProduct = await Container.deleteById(id);
+            console.log(deleteProduct)
+            if(deleteProduct) {
                 res.json({
                     status: true,
                     message: 'Product successfully deleted',
-                    productDeleted: productToDelete
+                    productDeleted: deleteProduct
                 });
             } else {
                 res.json({
-                    status: false,
+                    status: true,
                     message: "Product doesn't exists, please check the information",
-                    failedProduct: productToDelete
                 });
             }
         }
@@ -106,4 +136,21 @@ export const deleteProduct = async(req, res = response) => {
         });
     }
 };
+
+export const deleteAll = async(req, res = response) => {
+    try {
+        await Container.deleteAll();
+        res.json({
+            status: true,
+            message: 'All products successfully deleted'
+        })
+    }catch(err) {
+        log.info(err);
+        res.json({
+            status: false,
+            message: 'Failed to delete all Products, please contact support'
+        });
+    }
+}
+
 

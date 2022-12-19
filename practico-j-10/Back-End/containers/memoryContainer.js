@@ -1,31 +1,31 @@
-import log from '../utils/logger.js';
+import log from "../utils/logger.js";
 
-class ContainerMongo {
-    constructor(collection) {
-        this.collection = collection
+export default class ContainerMemory {
+    constructor(array) {
+        this.array = array;
     }
 
     async save(item) {
         try {
-            return await item.save()
+            return await this.array.push(item)
         } catch (err) {
             log.info(err);
-            throw new Error('MongoSv Error');
+            throw new Error('Memory Error');
         }
     };
 
     async getAll() {
         try {
-            return await this.collection.find();
+            return await this.array;
         } catch (err) {
             log.info(err);
-            throw new Error('MongoSv Error');
+            throw new Error('Memory Error');
         }
     };
 
     async getById(id) {
         try {
-            const allItems = await this.getAll(this.collection);
+            const allItems = this.array;
             const findItem = allItems.find(el => el._id == id);
             if (findItem !== undefined) {
                 return findItem
@@ -34,45 +34,44 @@ class ContainerMongo {
             }
         } catch (err) {
             log.info(err);
-            throw new Error('MongoSv Error');
+            throw new Error('Memory Error');
         }
     }
 
     async updateOne(id, body) {
         try {
-            const allItems = await this.getAll(this.collection);
-            const findItem = allItems.find(el => el._id == id);
-            console.log()
-            if (findItem !== undefined) {
-                await this.collection.updateOne(
-                    {_id: id},
-                    {$set: body}
-                );
-                return {...findItem._doc, ...body}
-
+            const allItems = this.array;
+            const findById = allItems.findIndex(el => el._id == id);
+            console.log(findById)
+            if (findById !== -1) {
+                if(allItems[findById]._doc) {
+                    allItems[findById] = {...allItems[findById]._doc, ...body}
+                    return allItems[findById]
+                } else {
+                    allItems[findById] = {...allItems[findById], ...body}
+                    return allItems[findById]
+                }
             } else {
                 return undefined
             }
         } catch (err) {
             log.info(err);
-            throw new Error('MongoSv Error');
+            throw new Error('Memory Error');
         }
     }
 
     async deleteById(id) {
         try {
-            const allItems = await this.getAll(this.collection);
             const getItem = await this.getById(id);
-            console.log(getItem, 'esto es getitem')
-            if (getItem !== undefined) {
-                await this.collection.deleteOne({_id: id});
+            if (getItem) {
+                this.array = this.array.filter(el => el._id != id);
                 return getItem
             } else {
                 return undefined
             }
         } catch (err) {
             log.info(err)
-            throw new Error('MongoSv Error');
+            throw new Error('Memory Error');
         }
     }
 
@@ -90,13 +89,7 @@ class ContainerMongo {
 
         } catch(err) {
             log.info(err)
-            throw new Error('FileSystem DB Error');
+            throw new Error('Memory DB Error');
         }
     }
 }
-
-export default ContainerMongo;
-
-
-
-
