@@ -21,7 +21,7 @@ un producto hardcodeado para que lo pruebes ya que funciona de esta manera.).
 ⚫ DeletById
 ```
 
-###Aspectos a incluir en el entregable:
+### Aspectos a incluir en el entregable:
 
 #### A) A las clases derivadas de los contenedores se las conoce como DAOs (Data Access Objects), y pueden ir todas incluidas en una misma carpeta de ‘daos’.
 #### B) En la carpeta de daos, incluir un archivo que importe todas las clases y exporte una instancia de dao de productos y una de dao de carritos, según corresponda. Esta decisión se tomará en base al valor de una variable de entorno cargada al momento de ejecutar el servidor.
