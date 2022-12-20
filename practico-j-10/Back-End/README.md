@@ -17,7 +17,8 @@ Para esta consigna realice 4 containers con los siguientes metodos:
 ⚫ UpdateById
 ⚫ DeleteItemInCart 
 ⚫ AddItemToCart (Debido a la falta de persistencia de Datos, en memoria no funciona este metodo, deje un carrito y 
-un producto hardcodeado para que lo pruebes ya que funciona de esta manera.).
+un producto hardcodeado para que lo pruebes ya que funciona de esta manera. Para que funcione este metodo en memoria tendria que invocarlo 
+desde el controller Products donde se esta guardando momentaneamente la informacion en la clase de Products).
 ⚫ DeletById
 ```
 
@@ -31,5 +32,9 @@ un producto hardcodeado para que lo pruebes ya que funciona de esta manera.).
 Para la facilidad en la utilizacion de las DBS cree una carpeta llamada ENVIROMENT donde vas a encontrar
 el archivo .env donde cambiando el nombre de la variable INSTANCE podras acceder a las diferentes bases de Datos.
 La logica se encuentra en esa misma carpeta en el archivo instances.js
+Para acceder a Mongo = INSTANCE = 'Mongo'
+Para acceder a Firebase = INSTANCE = 'Firebase'
+Para acceder a Memoria = INSTANCE = 'Memory'
+Para acceder a FileSystem = INSTANCE = 'FileSystem'
 ```
 
