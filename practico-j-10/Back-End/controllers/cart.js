@@ -3,20 +3,23 @@ import log from "../utils/logger.js";
 import {response} from "express";
 import dayjs from 'dayjs';
 import Instance from "../environment/instances.js";
+import {config} from "dotenv";
+
+config({ path:'./environment/.env' });
 
 const dateNow = dayjs().format('YYYY/MM/DD');
 const Container = new Instance.classCart();
 
 export const saveCart = async (req, res = response) => {
     try {
-        const cartToAdd = {timestamp: dateNow};
+        const cartToAdd = { timestamp: dateNow, products: [] };
         const newCart = new CartModel(cartToAdd);
-        const saveCart = await Container.save(newCart);
+        // Condicional para no utilizar el modelo de Mongoose con Firebase porque provoca un error.
+        const saveCart = process.env.INSTANCE === 'Firebase' ? await Container.save(cartToAdd) : await Container.save(newCart)
         res.json({
             status: true,
-            cart: saveCart,
             message: 'Cart successfully created',
-            cartAdded: newCart
+            cartAdded: saveCart
         });
 
     } catch (err) {
@@ -39,7 +42,7 @@ export const getAllCarts = async (req, res = response) => {
             });
         } else {
             res.json({
-                status: true,
+                status: false,
                 message: "There's no carts created",
                 carts: allCarts
             });
@@ -57,8 +60,7 @@ export const getAllCarts = async (req, res = response) => {
 export const getCartByID = async (req, res = response) => {
     try {
         const {id} = req.params;
-        const allCarts = await Container.getAll();
-        const cartToFind = allCarts.find(el => el._id == id)
+        const cartToFind = await Container.getById(id);
         if (cartToFind) {
             res.json({
                 status: true,
@@ -67,7 +69,7 @@ export const getCartByID = async (req, res = response) => {
             })
         } else {
             res.json({
-                status: true,
+                status: false,
                 message: "Cart doesn't exists, please check the ID"
             })
         }
@@ -95,7 +97,7 @@ export const updateCart = async (req, res = response) => {
                 })
             } else {
                 res.json({
-                    status: true,
+                    status: false,
                     message: "Cart doesn't exists, please check the information"
                 })
             }
@@ -123,7 +125,7 @@ export const deleteCart = async (req, res = response) => {
                 });
             } else {
                 res.json({
-                    status: true,
+                    status: false,
                     message: "Cart doesn't exists, please check the information",
                 });
             }
@@ -136,6 +138,28 @@ export const deleteCart = async (req, res = response) => {
         });
     }
 };
+
+export const addProductToCart = async(req, res = response) => {
+    try {
+        const { id } = req.params;
+        const { id_prod } = req.params;
+        const productToAdd = await Container.addItemToCart(id, id_prod);
+        if(productToAdd) {
+            res.json({
+                status: true,
+                message: 'Product successfully added to cart',
+                productAdded: productToAdd
+            })
+        } else {
+            res.json({
+                status: false,
+                message: 'Product or Cart not found, please check the information'
+            })
+        }
+    }catch(err) {
+
+    }
+}
 
 export const deleteProductInCart = async (req, res = response) => {
     try {

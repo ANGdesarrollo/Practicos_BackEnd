@@ -1,63 +1,127 @@
 import log from '../utils/logger.js';
-import {getFirestore} from "firebase-admin/firestore";
-import admin from "firebase-admin";
+
+import dbConnectionFirebase from "../database/firebase/config.js";
+import Instance from "../environment/instances.js";
+
+const db = await dbConnectionFirebase();
 
 class ContainerFirebase {
-    constructor(db, collection) {
+    constructor(collection) {
         this.db = db;
         this.collection = collection;
     }
 
-
     async save(item) {
         try {
-            return await this.db.collection(this.collection).add(item);
+            await this.db.collection(this.collection).add(item);
+            return item
         } catch (err) {
-            log.info(err);
-            throw new Error('Server Error');
+            log.info(err)
+            throw new Error('Firebase DB Error');
         }
     }
 
     async getAll() {
         try {
-            return await this.db.collection(this.collection).get();
+            const allProducts = [];
+            const snapshot = await this.db.collection(this.collection).get();
+            snapshot.forEach((doc) => {
+                const document = {...doc.data(), id: doc.id}
+                allProducts.push(document)
+            })
+            return allProducts;
         } catch (err) {
-            log.info(err);
-            throw new Error('Server Error');
+            log.info(err)
+            throw new Error('Firebase DB Error');
+        }
+    };
+
+    async getById(id) {
+        try {
+            const allItems = await this.getAll();
+            const findItem = allItems.find(el => el.id === id);
+            if (findItem !== undefined) {
+                return findItem
+            } else {
+                return undefined
+            }
+        } catch (err) {
+            log.info(err)
+            throw new Error('Firebase DB Error');
         }
     }
 
-    async updateOne(item) {
-        // try {
-        //     const allItems = this.getAll();
-        //     const findItem = allItems.find(el => el.id == item.id);
-        //     if (findItem !== undefined) {
-        //         return await this.collection.updateOne(
-        //             {_id: item._id},
-        //             {$set: item}
-        //         )
-        //     } else {
-        //         return undefined
-        //     }
-        // } catch (err) {
-        //     log.info(err);
-        //     throw new Error('Server Error');
-        // }
+    async updateOne(id, body) {
+        try {
+            const allItems = await this.getAll();
+            const findItem = allItems.find(el => el.id === id);
+            if (findItem !== undefined) {
+                const updatedItem = {...findItem, ...body}
+                await this.db.collection(this.collection).doc(id).set(updatedItem)
+                return updatedItem
+            } else {
+                return undefined
+            }
+        } catch (err) {
+            log.info(err)
+            throw new Error('Firebase DB Error');
+        }
+    };
+
+    async deleteById(id) {
+        try {
+            const allItems = await this.getAll();
+            const findItem = allItems.find(el => el.id === id);
+            if (findItem !== undefined) {
+                await db.collection(this.collection).doc(id).delete();
+                return findItem;
+            } else {
+                return undefined;
+            }
+        } catch (err) {
+            log.info(err)
+            throw new Error('Firebase DB Error');
+        }
+    };
+
+    async addItemToCart(id_cart, id_prod){
+        try {
+            const Container = new Instance.classProduct();
+            console.log('pase a allProducts')
+            const allProducts = await Container.getAll();
+            console.log('pase a findProduct')
+            const findProduct = allProducts.find(el => el.id === id_prod);
+            console.log(findProduct)
+            if(findProduct) {
+                let cart = await this.getById(id_cart);
+                cart.products = [...cart.products, findProduct];
+                await this.updateOne(id_cart, cart);
+                return cart
+            } else {
+                return undefined
+            }
+        }catch(err) {
+            log.info(err)
+            throw new Error('Firebase DB Error');
+        }
     }
 
-    async deleteOne(item) {
-        // try {
-        //     const allItems = await this.getAll(this.collection);
-        //     const findItem = allItems.find(el => el._id == item._id);
-        //     if (findItem !== undefined) {
-        //         return await this.collection.deleteOne({_id: item._id})
-        //     } else {
-        //         return undefined
-        //     }
-        // } catch (err) {
-        //     log.info(err)
-        //     throw new Error('Server Error');
-        // }
+    async deleteItemInCart(idCart, idItem) {
+        try {
+            let cart = await this.getById(idCart);
+            const exists = cart.products.find(el => el._id === idItem);
+            if(exists) {
+                cart.products = cart.products.filter(el => el.id !== idItem);
+                await this.updateOne(idCart, cart)
+                return cart;
+            } else {
+                return undefined
+            }
+
+        } catch(err) {
+            log.info(err)
+            throw new Error('Firebase DB Error');
+        }
     }
 }
 

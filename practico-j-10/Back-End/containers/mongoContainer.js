@@ -1,4 +1,5 @@
 import log from '../utils/logger.js';
+import Instance from "../environment/instances.js";
 
 class ContainerMongo {
     constructor(collection) {
@@ -7,7 +8,8 @@ class ContainerMongo {
 
     async save(item) {
         try {
-            return await item.save()
+            await item.save();
+            return item;
         } catch (err) {
             log.info(err);
             throw new Error('MongoSv Error');
@@ -28,9 +30,9 @@ class ContainerMongo {
             const allItems = await this.getAll(this.collection);
             const findItem = allItems.find(el => el._id == id);
             if (findItem !== undefined) {
-                return findItem
+                return findItem;
             } else {
-                return undefined
+                return undefined;
             }
         } catch (err) {
             log.info(err);
@@ -42,16 +44,15 @@ class ContainerMongo {
         try {
             const allItems = await this.getAll(this.collection);
             const findItem = allItems.find(el => el._id == id);
-            console.log()
             if (findItem !== undefined) {
                 await this.collection.updateOne(
                     {_id: id},
                     {$set: body}
                 );
-                return {...findItem._doc, ...body}
+                return {...findItem._doc, ...body};
 
             } else {
-                return undefined
+                return undefined;
             }
         } catch (err) {
             log.info(err);
@@ -61,38 +62,57 @@ class ContainerMongo {
 
     async deleteById(id) {
         try {
-            const allItems = await this.getAll(this.collection);
             const getItem = await this.getById(id);
-            console.log(getItem, 'esto es getitem')
             if (getItem !== undefined) {
                 await this.collection.deleteOne({_id: id});
-                return getItem
+                return getItem;
             } else {
-                return undefined
+                return undefined;
             }
         } catch (err) {
-            log.info(err)
+            log.info(err);
             throw new Error('MongoSv Error');
         }
     }
+
+    async addItemToCart(id_cart, id_prod) {
+        try {
+            const Container = new Instance.classProduct();
+            const allProducts = await Container.getAll();
+            const findProduct = allProducts.find(el => el._id == id_prod);
+            if (findProduct) {
+                let cart = await this.getById(id_cart);
+                if (cart) {
+                    cart.products = [...cart.products, findProduct];
+                    await this.updateOne(id_cart, cart);
+                    return cart;
+                }
+            } else {
+                return undefined;
+            }
+        } catch (err) {
+            log.info(err);
+            throw new Error('Firebase DB Error');
+        }
+    };
 
     async deleteItemInCart(idCart, idItem) {
         try {
             let cart = await this.getById(idCart);
             const exists = cart.products.find(el => el._id === idItem);
-            if(exists) {
+            if (exists) {
                 cart.products = cart.products.filter(el => el._id !== idItem);
-                await this.updateOne(idCart, cart)
+                await this.updateOne(idCart, cart);
                 return cart;
             } else {
                 return undefined
             }
 
-        } catch(err) {
-            log.info(err)
+        } catch (err) {
+            log.info(err);
             throw new Error('FileSystem DB Error');
         }
-    }
+    };
 }
 
 export default ContainerMongo;

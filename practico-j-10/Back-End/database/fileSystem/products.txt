@@ -5,16 +5,25 @@
     "price": 40,
     "description": "The best Mouse in the world, 3500DPI",
     "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
-    "stock": 40,
-    "_id": "639fde23e0fd171842f1bdb0"
+    "stock": 3000,
+    "_id": "639fde3ba47a48157961fd62"
   },
   {
-    "timestamp": "2022-12-19T03:00:00.000Z",
+    "timestamp": "2022-12-20T03:00:00.000Z",
     "title": "Mouse",
     "price": 40,
     "description": "The best Mouse in the world, 3500DPI",
     "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
-    "stock": 3000,
-    "_id": "639fde3ba47a48157961fd62"
+    "stock": 40,
+    "_id": "63a139ad00b05e4e30dd588d"
+  },
+  {
+    "timestamp": "2022-12-20T03:00:00.000Z",
+    "title": "Mouse",
+    "price": 40,
+    "description": "The best Mouse in the world, 3500DPI",
+    "thumbnail": "https://res.cloudinary.com/dwz16rstr/image/upload/v1662958404/react-js-game-on/products/Mouse_1_bz5vfj.webp",
+    "stock": 40,
+    "_id": "63a139b000b05e4e30dd588e"
   }
 ]

@@ -4,17 +4,13 @@ import productRouter from '../routes/products.js';
 import cartRouter from'../routes/cart.js';
 import  log from '../utils/logger.js';
 import dbConnectionMongo from "../database/mongoDB/config.js";
-import dbConnectionFirebase from "../database/firebase/config.js";
-import {getFirestore} from "firebase-admin/firestore";
 
 config({ path:'./environment/.env' });
 
 process.env.INSTANCE === 'Mongo' && await dbConnectionMongo();
-process.env.INSTANCE === 'Firebase' && await dbConnectionFirebase();
 process.env.INSTANCE === 'FileSystem' && log.info('FileSystem database Online');
 process.env.INSTANCE === 'Memory' && log.info('Memory instance Online');
 
-const db = getFirestore();
 const app = express();
 const PORT = process.env.PORT;
 

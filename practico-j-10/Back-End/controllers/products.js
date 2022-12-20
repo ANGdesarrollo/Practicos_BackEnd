@@ -3,6 +3,9 @@ import log from "../utils/logger.js";
 import {response} from "express";
 import Instance from "../environment/instances.js";
 import dayjs from 'dayjs';
+import {config} from "dotenv";
+
+config({ path:'./environment/.env' });
 
 const dateNow = dayjs().format('YYYY/MM/DD');
 const Container = new Instance.classProduct();
@@ -12,12 +15,13 @@ export const saveProduct = async (req, res = response) => {
         if (req.body !== undefined) {
             const productToAdd = {...req.body, timestamp: dateNow}
             let newProduct = new ProductModel(productToAdd);
+            // Condicional para no utilizar el modelo de Mongoose con Firebase porque provoca un error.
+            const productSaved = process.env.INSTANCE === 'Firebase' ? await Container.save(productToAdd) : await Container.save(newProduct)
 
-            await Container.save(newProduct);
             res.json({
                 status: true,
                 message: 'Product successfully added',
-                productAdded: newProduct
+                productAdded: productSaved
             });
         }
     } catch (err) {
@@ -67,7 +71,7 @@ export const getById = async (req, res = response) => {
             })
         } else {
             res.json({
-                status: true,
+                status: false,
                 message: "Product doesn't exists, please check the ID"
             })
         }
@@ -95,7 +99,7 @@ export const updateProduct = async(req, res = response) => {
                 })
             } else {
                 res.json({
-                    status: true,
+                    status: false,
                     message: "Product doesn't exists, please check the information"
                 })
             }
@@ -114,7 +118,6 @@ export const deleteProduct = async(req, res = response) => {
         if(req.body !== undefined) {
             const { id } = req.params;
             const deleteProduct = await Container.deleteById(id);
-            console.log(deleteProduct)
             if(deleteProduct) {
                 res.json({
                     status: true,
@@ -123,7 +126,7 @@ export const deleteProduct = async(req, res = response) => {
                 });
             } else {
                 res.json({
-                    status: true,
+                    status: false,
                     message: "Product doesn't exists, please check the information",
                 });
             }
@@ -136,21 +139,5 @@ export const deleteProduct = async(req, res = response) => {
         });
     }
 };
-
-export const deleteAll = async(req, res = response) => {
-    try {
-        await Container.deleteAll();
-        res.json({
-            status: true,
-            message: 'All products successfully deleted'
-        })
-    }catch(err) {
-        log.info(err);
-        res.json({
-            status: false,
-            message: 'Failed to delete all Products, please contact support'
-        });
-    }
-}
 
 

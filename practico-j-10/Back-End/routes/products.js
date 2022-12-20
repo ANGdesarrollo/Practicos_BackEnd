@@ -1,12 +1,12 @@
 import Router from 'express';
-import {saveProduct, getAllProducts, updateProduct, deleteProduct, getById, deleteAll} from "../controllers/products.js";
+import {saveProduct, getAllProducts, updateProduct, deleteProduct, getById} from "../controllers/products.js";
+import {verifyRole} from "../middlewares/adminVerify.js";
 const router = Router();
 
-router.get('/', getAllProducts);
+router.get('/' ,getAllProducts);
 router.get('/:id', getById);
-router.post('/', saveProduct);
-router.put('/:id', updateProduct);
-router.delete('/:id', deleteProduct);
-router.delete('/', deleteAll);
+router.post('/', verifyRole, saveProduct);
+router.put('/:id', verifyRole, updateProduct);
+router.delete('/:id', verifyRole, deleteProduct);
 
 export default router;
