@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/containers/fileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/containers/fileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/containers/firebaseContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/containers/firebaseContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/containers/memoryContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/containers/memoryContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/containers/mongoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/containers/mongoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/controllers/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/controllers/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/controllers/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/controllers/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/daos/carts/cartDaosFirebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/daos/carts/cartDaosFirebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/daos/carts/cartDaosMemory.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/daos/carts/cartDaosMemory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/daos/products/productDaosMemory.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/daos/products/productDaosMemory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/database/fileSystem/carts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/database/fileSystem/carts.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/database/fileSystem/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/database/fileSystem/products.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/database/firebase/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/database/firebase/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/database/mongoDB/certificationFirebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/database/firebase/certificationFirebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/environment/.env" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/environment/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/routes/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/routes/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/routes/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/routes/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-j-10/Back-End/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-j-10/Back-End/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +86,7 @@
       <workItem from="1671214466288" duration="8423000" />
       <workItem from="1671302938357" duration="6092000" />
       <workItem from="1671405061059" duration="13653000" />
-      <workItem from="1671462263167" duration="30698000" />
+      <workItem from="1671462263167" duration="31685000" />
     </task>
     <servers />
   </component>
