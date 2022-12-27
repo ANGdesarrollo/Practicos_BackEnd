@@ -63,7 +63,7 @@ class ContainerFirebase {
                 return undefined
             }
         } catch (err) {
-            log.info(err)
+            log.info(err);
             throw new Error('Firebase DB Error');
         }
     };

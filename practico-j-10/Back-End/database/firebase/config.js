@@ -23,4 +23,5 @@ const dbConnectionFirebase = async() => {
         throw new Error('Error to initialize Firebase');
     }
 }
+
 export default dbConnectionFirebase
