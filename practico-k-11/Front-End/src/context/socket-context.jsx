@@ -32,6 +32,9 @@ export const SocketsProvider = ({children}) => {
 
     const sendProduct = (e) => {
         e.preventDefault();
+        if(!validateField(product)){ return alert('Complete the Product field')}
+        if(!validateField(price)) { return alert('Complete the Price field')}
+        if(!validateImageUrl(thumbnail)) { return alert('Wrong format of Image')}
 
         socket.emit('productAdded', {product, price, thumbnail});
     };
@@ -46,8 +49,6 @@ export const SocketsProvider = ({children}) => {
         if(!validateEmail(email)) { return alert('Wrong format of Email')}
         if(!validateField(message)) { return alert('Complete the Message field!')}
 
-
-        console.log(validateField(username))
         const dataMessage = {
             author: {email, username, surname, age, alias, image},
             text: message
