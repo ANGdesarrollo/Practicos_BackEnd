@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import {SOCKET_URL} from "../config/default";
 import {createContext,  useState} from "react";
-import {useForm, useFetch, useNormalizr, useCompressed} from "../hooks";
+import {useForm, useFetch, useNormalizr, useCompressed, useValidations} from "../hooks";
 
 const socket = io(SOCKET_URL, {
     withCredentials: true,
@@ -23,6 +23,7 @@ export const SocketsProvider = ({children}) => {
     const { data, isLoading } = useFetch('http://localhost:8080/api/test-products');
     const { denormalizedData } = useNormalizr();
     const { showCompressionPercentage } = useCompressed()
+    const { validateField, validateEmail, validateImageUrl } = useValidations()
 
     const {formState, onInputChange, onResetForm} = useForm();
 
@@ -31,11 +32,22 @@ export const SocketsProvider = ({children}) => {
 
     const sendProduct = (e) => {
         e.preventDefault();
+
         socket.emit('productAdded', {product, price, thumbnail});
     };
 
     const sendMessage = (e) => {
         e.preventDefault();
+        if(!validateField(username)) { return alert('Complete the Username field!')}
+        if(!validateField(surname)) { return alert('Complete the Surname field!')}
+        if(!validateField(age)) { return alert('Complete the Age field!')}
+        if(!validateField(alias)) { return alert('Complete the Alias field!')}
+        if(!validateImageUrl(image)) { return alert('Wrong format of image!')}
+        if(!validateEmail(email)) { return alert('Wrong format of Email')}
+        if(!validateField(message)) { return alert('Complete the Message field!')}
+
+
+        console.log(validateField(username))
         const dataMessage = {
             author: {email, username, surname, age, alias, image},
             text: message

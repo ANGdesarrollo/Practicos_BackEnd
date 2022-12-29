@@ -76,5 +76,18 @@
     "text": "Hola, testeando que funcione correctamente el Socket",
     "timestamp": "2022/12/29 01:51:34",
     "id": 6
+  },
+  {
+    "author": {
+      "email": "alexisgraff123@gmail.com",
+      "username": "Alexis",
+      "surname": "Graff",
+      "age": "29",
+      "alias": "Ale",
+      "image": "https://www.enter.co/wp-content/uploads/2015/09/Nuevo-logo-Google-destacada.jpg"
+    },
+    "text": "Probando validadores de campo",
+    "timestamp": "2022/12/29 01:51:34",
+    "id": 7
   }
 ]
