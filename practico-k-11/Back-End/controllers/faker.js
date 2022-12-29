@@ -6,10 +6,11 @@ export const fakerProducts = (req, res) => {
         const products = [];
 
         for (let i = 0; i < 5; i++) {
+            const { commerce, image } = faker
             const product = {
-                product: faker.commerce.product(),
-                price: faker.commerce.price(),
-                thumbnail: faker.image.cats(1234, 2345, true)
+                product: commerce.product(),
+                price: commerce.price(),
+                thumbnail: image.cats(190, 190, true)
             }
             products.push(product);
         }
@@ -27,5 +28,4 @@ export const fakerProducts = (req, res) => {
             message: 'Products cant be created'
         })
     }
-
 }

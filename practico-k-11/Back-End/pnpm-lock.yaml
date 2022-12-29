@@ -2,20 +2,24 @@ lockfileVersion: 5.4
 
 specifiers:
   cors: ^2.8.5
+  dayjs: ^1.11.7
   dotenv: ^16.0.3
   express: ^4.18.2
   faker: 5.5.3
   mongoose: ^6.8.1
   nodemon: ^2.0.20
+  normalizr: ^3.6.2
   pino: ^8.8.0
   pino-pretty: ^9.1.1
   socket.io: ^4.5.4
 
 dependencies:
   cors: 2.8.5
+  dayjs: 1.11.7
   express: 4.18.2
   faker: 5.5.3
   mongoose: 6.8.1
+  normalizr: 3.6.2
   pino: 8.8.0
   pino-pretty: 9.1.1
   socket.io: 4.5.4
@@ -1064,6 +1068,10 @@ packages:
     resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
     dev: false
 
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
+
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -1564,6 +1572,10 @@ packages:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /normalizr/3.6.2:
+    resolution: {integrity: sha512-30qCybsBaCBciotorvuOZTCGEg2AXrJfADMT2Kk/lvpIAcipHdK0zc33nNtwKzyfQAqIJXAcqET6YgflYUgsoQ==}
+    dev: false
 
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}

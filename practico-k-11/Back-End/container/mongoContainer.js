@@ -1,6 +1,6 @@
 import { log } from '../utils/logger.js';
 
-export class MongoContainer {
+export default class MongoContainer {
     constructor(collection) {
         this.collection = collection;
     }
