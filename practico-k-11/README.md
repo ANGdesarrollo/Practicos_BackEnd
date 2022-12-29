@@ -49,7 +49,10 @@ mediante sockets al back, este mismo lo toma y se lo devuelve a todos los usuari
 #### 1) Modificar la persistencia de los mensajes para que utilicen un contenedor que permita guardar objetos anidados (archivos o mongodb o firebase).
 
 ```
-Se modifico la persistencia de datos con MONGO DB.
+Se modifico la persistencia de datos con File System. Al principio intente con Mongo pero por alguna razon
+la normalizacion de datos no funcionaba con Mongo de la misma manera que con File System, leyendo la documentacion
+de Normalizr decia esto: "Using a random number/string generator like uuid will cause unexpected errors." Asi que opte por fileSystem
+y el codigo funciono. 
 ```
 
 #### 2) El mensaje se envía del frontend hacia el backend, el cual lo almacenará en la base de datos elegida. Luego cuando el cliente se conecte o envie un mensaje, recibirá un array de mensajes a representar en su vista.
@@ -60,4 +63,15 @@ se realiza un unico llamado a todos los chats para que se vea en su pantalla, pe
 se envian al back y el back se los re envia a todos sin necesidad de hacer un getAll() a toda la DB por cada mensaje que mandan
 ```
 
+#### 3) El array que se devuelve debe estar normalizado con normalizr, conteniendo una entidadde autores. Considerar que el array tiene sus autores con su correspondiente id (mail del usuario), pero necesita incluir para el proceso de normalización un id para todo el array en su conjunto (podemos asignarle nosotros un valor fijo).
 
+
+#### 4) El frontend debería poseer el mismo esquema de normalización que el backend, para que este pueda desnormalizar y presentar la información adecuada en la vista.
+
+```
+El metodo de denormalizacion lo configure en el Front-End en un Hook llamado useNormalizr y lo aplique
+en el contexto de sockets.
+```
+#### 5) Considerar que se puede cambiar el nombre del id que usa normalizr, agregando un tercer parametro a la función schema
+
+#### 6) Presentar en el frontend (a modo de test) el porcentaje de compresión de los mensajes recibidos. Puede ser en el título del centro de mensajes.
