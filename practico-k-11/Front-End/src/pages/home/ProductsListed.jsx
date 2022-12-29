@@ -4,7 +4,7 @@ import {SocketContext} from "../../context/socket-context";
 
 export const ProductsListed = () => {
 
-    const {data, isLoading, products} = useContext(SocketContext);
+    const {data, isLoading, products, allProducts} = useContext(SocketContext);
 
     return (
         <div className="container">
@@ -21,6 +21,11 @@ export const ProductsListed = () => {
                     {data.products.map((el, i) => {
                         return (
                             <ItemProduct key={i} fakerProducts={el}/>
+                        )
+                    })}
+                    {allProducts.length > 0 && allProducts.map(el => {
+                        return (
+                            <ItemProduct fakerProducts={el}></ItemProduct>
                         )
                     })}
                     {products.map(el => {

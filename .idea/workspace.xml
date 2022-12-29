@@ -3,20 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/container/mongoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/container/mongoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/faker.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/faker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/container/mongoContainer.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/socketChats.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/socketChats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/models/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/models/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/socketProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/controllers/socketProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/daos/chatDaos/mongoChatDaos.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/daos/chatDaos/fileSystemChatDaos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/database/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/enviroment/.env" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/enviroment/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/models/chat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/models/product.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/normalizr/normalizr.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/normalizr/normalizr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Back-End/sockets/socket.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Back-End/sockets/socket.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/context/socket-context.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/context/socket-context.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/hooks/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/hooks/useNormalizr.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/hooks/useNormalizr.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/Chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/FormChat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/FormChat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/ProductsListed.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/ProductsListed.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/practico-k-11/Front-End/src/pages/home/chat.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,27 +42,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "D:/Programacion/Programacion/BackEnd/Practicos BackEnd/practico-k-11/Back-End",
+    "nodejs_package_manager_path": "pnpm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Back-End" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Front-End\src\hooks" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Front-End\hooks" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-8" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-7" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Back-End\container" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Front-End\src" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-k-11\Back-End\server" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-j-10\Back-End\database\firebase" />
       <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-j-10\Back-End\enviroment" />
-      <recent name="D:\Programacion\Programacion\BackEnd\Practicos BackEnd\practico-10\Back-End\containers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +116,9 @@
       <workItem from="1671905996245" duration="11941000" />
       <workItem from="1672144149706" duration="1907000" />
       <workItem from="1672184452197" duration="14508000" />
-      <workItem from="1672261399262" duration="7546000" />
+      <workItem from="1672261399262" duration="8548000" />
+      <workItem from="1672277486091" duration="3521000" />
+      <workItem from="1672323564955" duration="9745000" />
     </task>
     <servers />
   </component>

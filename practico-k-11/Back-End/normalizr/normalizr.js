@@ -1,16 +1,14 @@
-import {denormalize, normalize, schema} from 'normalizr';
+import { normalize, schema} from 'normalizr';
 
-const authorSchema = new schema.Entity('author', {}, {idAttribute: "email"});
+const authorSchema = new schema.Entity('authors', {}, {idAttribute: 'email'});
 const messageSchema = new schema.Entity("messages", {
     author: authorSchema
-}, {idAttribute: "_id"});
+});
 
-const chatSchema = new schema.Entity("allChats", {
+const chatSchema = new schema.Entity("chats", {
     messages: [messageSchema]
 })
 
-
 export const normalizedData = (data) => {
-    const dataID = {id: 'historyChats', data}
-    return normalize(dataID, chatSchema)
+    return normalize({id: "chatHistory", messages: data}, chatSchema)
 }

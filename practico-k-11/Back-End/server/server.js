@@ -6,11 +6,8 @@ import cors from 'cors';
 import { log } from '../utils/logger.js';
 import { sockets } from '../sockets/socket.js'
 import fakerRoute from '../routes/faker.js'
-import dbConnectionMongo from "../database/config.js";
 
 config({path: './enviroment/.env'});
-
-await dbConnectionMongo()
 
 const app = express();
 const PORT = process.env.PORT || 8080;

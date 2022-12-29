@@ -3,21 +3,22 @@ import { SocketContext } from "../../context/socket-context.jsx";
 import {useContext, useEffect} from "react";
 
 export const Chat = () => {
-    const { newMessage, allMessages } = useContext(SocketContext);
+    const { newMessage, allMessages, percentage } = useContext(SocketContext);
 
     return (
         <div className="container">
-            <div><h2>MESSAGE CENTER</h2></div>
+            <div className="d-flex align-items-center"><h2>MESSAGE CENTER</h2> <h4 className="p-4">Percentage Compressed : {percentage}%</h4></div>
             <div id="js-chatRoom" className="container">
-                {allMessages.length > 0 && allMessages.map(el => {
-                    const { _doc } = el;
+                {allMessages  && allMessages.map(el => {
+                    const { alias } = el.author
                     return (
-                        <p key={_doc._id}>{_doc.text}</p>
+                        <p key={el.id}><span className="blue">{alias}</span> <span className="red"> [{el.timestamp}]</span>: {el.text}</p>
                     )
                 })}
                 {newMessage.map(el => {
+                    const { alias } = el.author
                     return (
-                        <p key={el._id}>{el.text}</p>
+                        <p key={el.id}><span className="blue">{alias}</span> <span className="red"> [{el.timestamp}]</span>: {el.text}</p>
                     )
                 })}
             </div>
