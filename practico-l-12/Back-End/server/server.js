@@ -29,7 +29,8 @@ app.use( cors( { origin: corsPolicy } ) )
 app.use( '/api/test-products', routerFaker );
 app.use( '/api/auth', routerAuth )
 // Sockets
-export const io = new Server( server, { cors: corsConfig( corsPolicy ) }, log.info( 'Socket IO Online' ) );
+export const io = new Server( server, { cors: corsConfig( corsPolicy ) },
+    log.info( 'Socket IO Online' ) );
 
 sockets( io );
 
