@@ -1,0 +1,17 @@
+#js-chatRoom {
+    background-color: aliceblue;
+    height: 50vh;
+    width: 80vw;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+
