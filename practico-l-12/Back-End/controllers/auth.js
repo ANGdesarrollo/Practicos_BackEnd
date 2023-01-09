@@ -6,7 +6,8 @@ export const auth = ( req, res ) => {
         if( userAuth !== 'matias@gmail.com' || password !== '123' ) {
             return res.json( { status: false, message: 'login failed' } )
         } else {
-            req.session.username = userAuth;
+            req.session.user = userAuth;
+            console.log(req.session.user)
             res.json( {
                 status: true,
                 message: 'login success'

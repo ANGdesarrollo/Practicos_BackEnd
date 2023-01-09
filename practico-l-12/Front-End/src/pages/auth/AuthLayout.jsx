@@ -1,6 +1,6 @@
 export const AuthLayout = ({handleSubmit, onInputChange}) => {
     return (
-        <form onSubmit={handleSubmit} className="container w-25 mt-5">
+        <form method="POST" action="http://localhost:8080/api/auth" onSubmit={handleSubmit} className="container w-25 mt-5">
             <h3>Sign In</h3>
             <div className="mb-3">
                 <label>Email address</label>

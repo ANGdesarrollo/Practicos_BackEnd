@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/auth/AuthLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/auth/AuthLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +106,7 @@
       <workItem from="1672323564955" duration="13961000" />
       <workItem from="1673204401101" duration="13708000" />
       <workItem from="1673232967737" duration="2113000" />
-      <workItem from="1673235986087" duration="1529000" />
+      <workItem from="1673235986087" duration="7658000" />
     </task>
     <servers />
   </component>
