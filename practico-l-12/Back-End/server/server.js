@@ -17,13 +17,17 @@ const server = http.createServer( app );
 
 app.use( express.urlencoded( { extended: true } ) );
 app.use( express.json() );
-app.use( sessionMongo() )
+app.use( sessionMongo() );
 
 server.listen( PORT, () => {
     log.info( `Server listening on http://localhost:${ PORT }` )
 } );
 
-app.use( cors( { origin: corsPolicy } ) )
+app.use( cors( {
+    origin: corsPolicy,
+    methods: [ "GET", "POST" ],
+    credentials: true
+} ) )
 
 // Routes
 app.use( '/api/test-products', routerFaker );

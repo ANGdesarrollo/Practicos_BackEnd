@@ -1,7 +1,10 @@
 import { Router } from 'express';
-import { auth } from "../controllers/auth.js";
+import { auth, authVerification, destroySession } from "../controllers/auth.js";
+import resetSession from "../middlewares/resetSession.js";
 
 export const routerAuth = Router();
 
-routerAuth.post( '/',  auth )
+routerAuth.get('/', resetSession, authVerification)
+routerAuth.get('/logout', destroySession)
+routerAuth.post( '/',  auth );
 

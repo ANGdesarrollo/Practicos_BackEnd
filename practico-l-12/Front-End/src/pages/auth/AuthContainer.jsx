@@ -1,6 +1,9 @@
 import { AuthLayout } from "./AuthLayout";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../hooks/index.js";
+import Axios from 'axios';
+
+Axios.defaults.withCredentials = true
 
 export const AuthContainer = () => {
     const { formState, onInputChange } = useForm();
@@ -10,26 +13,17 @@ export const AuthContainer = () => {
 
     const handleSubmit = async( e ) => {
         e.preventDefault();
-        const formData = {
+
+        Axios.post( 'http://localhost:8080/api/auth', {
             userAuth,
             password
-        }
-        const res = await fetch( 'http://localhost:8080/api/auth', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify( formData ),
+        } ).then( ( { data } ) => {
+            if( data.status ) {
+                navigate( '/home' )
+            } else {
+                alert( 'error al iniciar sesion' )
+            }
         } )
-
-        const data = await res.json();
-
-        if( data.status ) {
-            navigate( '/home' )
-        } else {
-            alert( 'error al iniciar sesion' )
-        }
-
     }
     return (
         <AuthLayout handleSubmit={ handleSubmit } onInputChange={ onInputChange }/>
