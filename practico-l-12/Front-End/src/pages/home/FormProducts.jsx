@@ -10,7 +10,7 @@ export const FormProducts = ( { isLogged, logOut } ) => {
     return (
         <>
             {isLogged.status ? <div className="w-100 d-flex justify-content-center align-items-center">
-                <div><h1>¡ Bienvenido {isLogged.user} !</h1> </div>
+                <div><h1>¡ Welcome {isLogged.user} !</h1> </div>
                 <div className="m-4"><button onClick={logOut} className="btn btn-primary">Log out</button></div>
             </div> : <div className="w-100 d-flex justify-content-center align-items-center">
                 <div><h1>¡ Goodbye !</h1> </div>

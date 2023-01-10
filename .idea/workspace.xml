@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61fdb570-6833-42e9-90d0-30e30fee786f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/controllers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Back-End/controllers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/database/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Back-End/database/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/middlewares/authMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Back-End/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/routes/faker.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Back-End/routes/faker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Back-End/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Back-End/server/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/auth/AuthContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/auth/AuthContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/home/FormProducts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/home/FormProducts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/home/HomeContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/Front-End/src/pages/home/HomeContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practico-l-12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/practico-l-12/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +111,7 @@
       <workItem from="1673235986087" duration="8311000" />
       <workItem from="1673300952543" duration="2448000" />
       <workItem from="1673304019865" duration="298000" />
-      <workItem from="1673305260520" duration="7192000" />
+      <workItem from="1673305260520" duration="7554000" />
     </task>
     <servers />
   </component>
